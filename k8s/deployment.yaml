@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mm-bre
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: mm-bre
+
+  template:
+    metadata:
+      labels:
+        app: mm-bre
+
+    spec:
+      containers:
+        - name: mm-bre
+          image: madhujeetk/mm-bre:d1c499209839c7bccb654c791775e15b13545f1a
+          ports:
+            - containerPort: 8081
