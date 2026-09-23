@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: mm-bre-service
+
+spec:
+  type: {{ .Values.service.type }}
+
+  selector:
+    app: mm-bre
+
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.containerPort }}
+      protocol: TCP
