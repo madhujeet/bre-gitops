@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: madhujeetk/mm-bre
-  tag: cf33d27e25e42666bfb7c12cdc5bada461b9e8d9
+  tag: c3f9814f108641032533d5ec698b0138f58612c4
   pullPolicy: IfNotPresent
 
 service:
